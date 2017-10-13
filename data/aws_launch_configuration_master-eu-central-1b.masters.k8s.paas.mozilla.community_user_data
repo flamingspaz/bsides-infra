@@ -122,8 +122,8 @@ ensure-install-dir
 
 cat > kube_env.yaml << __EOF_KUBE_ENV
 Assets:
-- af764ad90236d5ab60642b9197977149cd845b1d@https://storage.googleapis.com/kubernetes-release/release/v1.6.7/bin/linux/amd64/kubelet
-- 9bf63e7be955987bf6dd014e1acbf87914eafff5@https://storage.googleapis.com/kubernetes-release/release/v1.6.7/bin/linux/amd64/kubectl
+- e55cb68d62384c6cf41fbad2cbf21afef5b9dc44@https://storage.googleapis.com/kubernetes-release/release/v1.7.8/bin/linux/amd64/kubelet
+- 0c3a28ac6551ee340b838e406f32fafe3124a5d5@https://storage.googleapis.com/kubernetes-release/release/v1.7.8/bin/linux/amd64/kubectl
 - 1d9788b0f5420e1a219aad2cb8681823fc515e7c@https://storage.googleapis.com/kubernetes-release/network-plugins/cni-0799f5732f2a11b329d9e3d51b9c8f2e3759f2ff.tar.gz
 - a821df4b965dbb119ed207c397b605a1fd99db3c@https://kubeupv2.s3.amazonaws.com/kops/1.6.0/linux/amd64/utils.tar.gz
 ClusterName: k8s.paas.mozilla.community
