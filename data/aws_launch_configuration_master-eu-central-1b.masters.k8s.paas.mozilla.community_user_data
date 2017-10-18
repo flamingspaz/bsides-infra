@@ -17,8 +17,9 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-NODEUP_URL=https://kubeupv2.s3.amazonaws.com/kops/1.6.0/linux/amd64/nodeup
+NODEUP_URL=https://kubeupv2.s3.amazonaws.com/kops/1.7.1/linux/amd64/nodeup
 NODEUP_HASH=
+
 
 
 
@@ -122,10 +123,10 @@ ensure-install-dir
 
 cat > kube_env.yaml << __EOF_KUBE_ENV
 Assets:
-- e55cb68d62384c6cf41fbad2cbf21afef5b9dc44@https://storage.googleapis.com/kubernetes-release/release/v1.7.8/bin/linux/amd64/kubelet
-- 0c3a28ac6551ee340b838e406f32fafe3124a5d5@https://storage.googleapis.com/kubernetes-release/release/v1.7.8/bin/linux/amd64/kubectl
+- e27fd6b32b8fa60b19508995af58171017fdd07a@https://storage.googleapis.com/kubernetes-release/release/v1.8.1/bin/linux/amd64/kubelet
+- e3e5d59be033ea6b46cfb65d6f8a0861e5c6322a@https://storage.googleapis.com/kubernetes-release/release/v1.8.1/bin/linux/amd64/kubectl
 - 1d9788b0f5420e1a219aad2cb8681823fc515e7c@https://storage.googleapis.com/kubernetes-release/network-plugins/cni-0799f5732f2a11b329d9e3d51b9c8f2e3759f2ff.tar.gz
-- a821df4b965dbb119ed207c397b605a1fd99db3c@https://kubeupv2.s3.amazonaws.com/kops/1.6.0/linux/amd64/utils.tar.gz
+- c18ca557507c662e3a072c3475da9bd1bc8a503b@https://kubeupv2.s3.amazonaws.com/kops/1.7.1/linux/amd64/utils.tar.gz
 ClusterName: k8s.paas.mozilla.community
 ConfigBase: s3://k8s-deleteme/k8s.paas.mozilla.community
 InstanceGroupName: master-eu-central-1b
@@ -137,9 +138,9 @@ Tags:
 channels:
 - s3://k8s-deleteme/k8s.paas.mozilla.community/addons/bootstrap-channel.yaml
 protokubeImage:
-  hash: ca9f3a641d4130616f09403afbf5eed749633a86
-  name: protokube:1.6.0
-  source: https://kubeupv2.s3.amazonaws.com/kops/1.6.0/images/protokube.tar.gz
+  hash: 8f796b29894b0184bff97906d072284c8e579331
+  name: protokube:1.7.1
+  source: https://kubeupv2.s3.amazonaws.com/kops/1.7.1/images/protokube.tar.gz
 
 __EOF_KUBE_ENV
 

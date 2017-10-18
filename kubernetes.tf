@@ -181,6 +181,7 @@ resource "aws_ebs_volume" "a-etcd-events-k8s-paas-mozilla-community" {
     Name                 = "a.etcd-events.k8s.paas.mozilla.community"
     "k8s.io/etcd/events" = "a/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -195,6 +196,7 @@ resource "aws_ebs_volume" "a-etcd-main-k8s-paas-mozilla-community" {
     Name                 = "a.etcd-main.k8s.paas.mozilla.community"
     "k8s.io/etcd/main"   = "a/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -209,6 +211,7 @@ resource "aws_ebs_volume" "b-etcd-events-k8s-paas-mozilla-community" {
     Name                 = "b.etcd-events.k8s.paas.mozilla.community"
     "k8s.io/etcd/events" = "b/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -223,6 +226,7 @@ resource "aws_ebs_volume" "b-etcd-main-k8s-paas-mozilla-community" {
     Name                 = "b.etcd-main.k8s.paas.mozilla.community"
     "k8s.io/etcd/main"   = "b/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -237,6 +241,7 @@ resource "aws_ebs_volume" "c-etcd-events-k8s-paas-mozilla-community" {
     Name                 = "c.etcd-events.k8s.paas.mozilla.community"
     "k8s.io/etcd/events" = "c/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -251,6 +256,7 @@ resource "aws_ebs_volume" "c-etcd-main-k8s-paas-mozilla-community" {
     Name                 = "c.etcd-main.k8s.paas.mozilla.community"
     "k8s.io/etcd/main"   = "c/a,b,c"
     "k8s.io/role/master" = "1"
+    project              = "bsides"
   }
 }
 
@@ -312,7 +318,7 @@ resource "aws_launch_configuration" "master-eu-central-1a-masters-k8s-paas-mozil
 
   root_block_device = {
     volume_type           = "gp2"
-    volume_size           = 20
+    volume_size           = 64
     delete_on_termination = true
   }
 
@@ -333,7 +339,7 @@ resource "aws_launch_configuration" "master-eu-central-1b-masters-k8s-paas-mozil
 
   root_block_device = {
     volume_type           = "gp2"
-    volume_size           = 20
+    volume_size           = 64
     delete_on_termination = true
   }
 
@@ -354,7 +360,7 @@ resource "aws_launch_configuration" "master-eu-central-1c-masters-k8s-paas-mozil
 
   root_block_device = {
     volume_type           = "gp2"
-    volume_size           = 20
+    volume_size           = 64
     delete_on_termination = true
   }
 
@@ -375,7 +381,7 @@ resource "aws_launch_configuration" "nodes-k8s-paas-mozilla-community" {
 
   root_block_device = {
     volume_type           = "gp2"
-    volume_size           = 20
+    volume_size           = 128
     delete_on_termination = true
   }
 
