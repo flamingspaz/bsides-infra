@@ -372,7 +372,7 @@ resource "aws_launch_configuration" "master-eu-central-1c-masters-k8s-paas-mozil
 resource "aws_launch_configuration" "nodes-k8s-paas-mozilla-community" {
   name_prefix                 = "nodes.k8s.paas.mozilla.community-"
   image_id                    = "ami-ea44e885"
-  instance_type               = "t2.micro"
+  instance_type               = "m4.xlarge"
   key_name                    = "${aws_key_pair.kubernetes-k8s-paas-mozilla-community-850e884665a817c91e4b6d6b3e8b2586.id}"
   iam_instance_profile        = "${aws_iam_instance_profile.nodes-k8s-paas-mozilla-community.id}"
   security_groups             = ["${aws_security_group.nodes-k8s-paas-mozilla-community.id}"]
