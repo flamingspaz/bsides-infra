@@ -12,11 +12,6 @@
         "ecr:ListImages",
         "ecr:BatchGetImage"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "*"
       ]
@@ -26,11 +21,6 @@
       "Action": [
         "ec2:*"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "*"
       ]
@@ -40,11 +30,6 @@
       "Action": [
         "elasticloadbalancing:*"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "*"
       ]
@@ -57,11 +42,6 @@
         "autoscaling:SetDesiredCapacity",
         "autoscaling:TerminateInstanceInAutoScalingGroup"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "*"
       ]
@@ -73,11 +53,6 @@
         "route53:ListResourceRecordSets",
         "route53:GetHostedZone"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "arn:aws:route53:::hostedzone/Z3D8E7PN881HUL"
       ]
@@ -87,11 +62,6 @@
       "Action": [
         "route53:GetChange"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "arn:aws:route53:::change/*"
       ]
@@ -101,11 +71,6 @@
       "Action": [
         "route53:ListHostedZones"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "*"
       ]
@@ -115,11 +80,6 @@
       "Action": [
         "s3:*"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "arn:aws:s3:::k8s-deleteme/k8s.paas.mozilla.community",
         "arn:aws:s3:::k8s-deleteme/k8s.paas.mozilla.community/*"
@@ -131,11 +91,6 @@
         "s3:GetBucketLocation",
         "s3:ListBucket"
       ],
-      "Condition": {
-          "StringEquals": {
-              "ec2:ResourceTag/KubernetesCluster": "k8s.paas.mozilla.community"
-          }
-      },
       "Resource": [
         "arn:aws:s3:::k8s-deleteme"
       ]
