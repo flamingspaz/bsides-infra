@@ -73,6 +73,27 @@
       "Resource": [
         "arn:aws:s3:::k8s-deleteme"
       ]
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "logs:DescribeLogStreams"
+        ],
+        "Resource": [
+            "arn:aws:logs:*:*:*"
+        ]
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "s3:GetObject"
+        ],
+        "Resource": [
+            "arn:aws:s3:::bsides-cw-logs/*"
+        ]
     }
   ]
 }
